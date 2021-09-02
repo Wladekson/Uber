@@ -135,6 +135,16 @@ nav
 		font-size: 18px
 		font-weight: 400
 		text-transform: uppercase
+		transition: 0.2s all
+		&:hover
+			transform: scale(1.1, 1.1)
+		&:active
+			transform: scale(1.0, 1.0)
+			background-image: linear-gradient(to top, $primary_color+#111111 0%, $primary_color+#424242+#111111 100%)
+
+
+
+			
 
 .label
 	width: 112px
@@ -245,3 +255,6 @@ nav
 			justify-content: center
 			align-items: center
 			cursor: pointer
+			transition: 1s all
+			&:hover
+				transform: rotate(-180deg) scale(1.2, 1.2)
