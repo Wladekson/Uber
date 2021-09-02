@@ -150,10 +150,6 @@ nav {
     text-transform: uppercase;
 }
 
-.reasons {
-    padding: 71px 0 65px 0;
-}
-
 .label {
     width: 112px;
     height: 24px;
@@ -167,7 +163,11 @@ nav {
     text-transform: uppercase;
 }
 
-.reasons_header {
+.reasons {
+    padding: 71px 0 65px 0;
+}
+
+.reasons .reasons_header {
     font-size: 38px;
     font-weight: 700;
     text-align: center;
@@ -176,14 +176,14 @@ nav {
     text-transform: uppercase;
 }
 
-.reasons_item {
+.reasons .reasons_item {
     margin-top: 32px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.reasons_ellipse {
+.reasons .reasons_item .reasons_ellipse {
     margin-right: 26px;
     width: 113px;
     height: 113px;
@@ -195,12 +195,12 @@ nav {
     flex-shrink: 0;
 }
 
-.reasons_descr {
+.reasons .reasons_item .reasons_descr {
     width: 346px;
 
 }
 
-.reasons_title {
+.reasons .reasons_item .reasons_descr .reasons_title {
     color: #1eacc7;
     font-size: 17px;
     font-weight: 400;
@@ -208,7 +208,7 @@ nav {
     margin-bottom: 0;
 }
 
-.reasons_text {
+.reasons .reasons_item .reasons_descr .reasons_text {
     color: #202020;
     font-size: 15px;
     font-weight: 300;
