@@ -3,6 +3,15 @@ $secondary_color: #ff5656
 $black_color: #212121
 $white_color: #ffffff
 
+=btn_hover
+	&:hover
+		transform: scale(1.1, 1.1)
+
+=btn_active
+	&:active
+		transform: scale(1.0, 1.0)
+		background-image: linear-gradient(to top, $primary_color+#111111 0%, $primary_color+#424242+#111111 100%)
+
 *
 	font-family: 'Roboto', sans-serif
 
@@ -90,6 +99,9 @@ nav
 		font-size: 14px
 		font-weight: 400
 		text-transform: uppercase
+		+btn_hover
+		+btn_active
+
 
 .promo
 	min-height: 800px
@@ -136,13 +148,11 @@ nav
 		font-weight: 400
 		text-transform: uppercase
 		transition: 0.2s all
-		&:hover
-			transform: scale(1.1, 1.1)
-		&:active
-			transform: scale(1.0, 1.0)
-			background-image: linear-gradient(to top, $primary_color+#111111 0%, $primary_color+#424242+#111111 100%)
+		+btn_hover
+		+btn_active
 
 .label
+	position: relative
 	width: 112px
 	height: 24px
 	margin: 0 auto
@@ -153,8 +163,13 @@ nav
 	font-weight: 300
 	text-align: center
 	text-transform: uppercase
+	z-index: 2
+	&_white
+		background-color: $white_color
+		color: $black_color
 
 .title
+	position: relative
 	font-size: 38px
 	font-weight: 700
 	color: $black_color
@@ -162,14 +177,23 @@ nav
 	margin-top: 36px
 	margin-bottom: 0
 	text-transform: uppercase
+	z-index: 2
+	&_white
+		color: $white_color
+
 
 .subtitle
+	position: relative
 	font-size: 17px
 	font-weight: 400
 	color: $black_color
 	text-align: center
 	margin-top: 19px
 	margin-bottom: 0
+	z-index: 2
+	&_white
+		color: $white_color
+
 
 .reasons
 	padding: 71px 0 65px 0
@@ -178,9 +202,10 @@ nav
 		margin-top: 32px
 		display: flex
 		justify-content: flex-start
-		align-items: center
+		align-items: flex-start
 
 		&_ellipse
+			margin-top: 10px
 			margin-right: 26px
 			width: 113px
 			height: 113px
@@ -189,6 +214,7 @@ nav
 			display: flex
 			justify-content: center
 			align-items: center
+			flex-shrink: 0
 
 		&_descr
 			width: 346px
@@ -257,3 +283,84 @@ nav
 			transition: 1s all
 			&:hover
 				transform: rotate(-180deg) scale(1.2, 1.2)
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $primary_color
+			&:after
+				content: ''
+				position: absolute
+				display: block
+				width: 2px
+				height: 14px
+				background-color: $primary_color
+				left
+
+.choice
+	position: relative
+	min-height: 895px
+	padding: 57px 0 138px 0
+	background: url('../img/bg/grid_bg.png') center (center / cover) no-repeat
+	.black
+		position: absolute
+		background-color: #070716
+		top: 0
+		left: 0
+		height: 500px
+		width: 100%
+		z-index: 1
+	&_img
+		position: relative
+		display: block
+		z-index: 2
+		margin: 57px auto 0 auto
+	&_descr
+		text-align: center
+		color: $black_color
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+
+.terms
+	padding: 68px 0 84px 0
+	&_title
+	color: $primary_color
+	font-size: 22px
+	font-weight: 400
+	&_block
+		margin: 33px 0
+		&_red
+			margin-top: 0
+			.terms_title
+				color: $secondary_color
+			.terms_list
+				li
+					&:before
+						background: url('../icons/checkbox_icon_red.png') center (center / cover) no-repeat		
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			position: relative
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 10px
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: -32px
+				top: 3px
+				width: 21px
+				height: 21px
+				background: url('../icons/checkbox_icon_blue.png') center (center / cover) no-repeat
+	&_subtitle
+		margin-top: 25px
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+		color: $primary_color
