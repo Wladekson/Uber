@@ -41,9 +41,9 @@ nav
 		font-weight: 300
 		line-height: 20px
 		text-decoration: none
-
-	&:hover
-		text-decoration: underline
+		&:hover
+			text-decoration: underline
+			color: $white_color
 
 	&_item
 		padding-right: 28px
@@ -364,3 +364,119 @@ nav
 		font-weight: 300
 		line-height: 24px
 		color: $primary_color
+.towns
+	position: relative
+	min-height: 717px
+	padding-top: 50px
+	background: url('../img/bg/map_bg.png') center (center / cover) no-repeat
+	&_link
+		display: block
+		position: absolute
+		bottom: 49px
+		left: 50%
+		transform: translateX(-50%)
+		text-align: center
+		font-size: 15px
+		font-weight: 400
+		line-height: 68px
+		text-transform: uppercase
+		color: $primary_color
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+			color: $primary_color
+
+footer
+	padding: 14px 23px 39px 23px
+	background-color: $white_color
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+.footer
+	&_separator
+		width: 299px
+		height: 4px
+		background-color: $primary_color
+		margin: 0 auto
+	
+	&_wrapper
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		padding-top: 32px
+
+	&_wrapper > div
+			&:nth-child(3)
+				display: flex 
+				justify-content: flex-end
+				
+	&_social
+		align-self: flex-start
+		display: flex
+		justify-content: flex-start
+		&_item
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 9px
+			width: 32px
+			height: 32px
+			border-radius: 100%
+			background-color: $black_color
+			flex-shrink: 0
+			flex-grow: 0
+			img
+				max-width: 16px
+	
+	&_links
+		width: 390px
+		margin: 0 auto
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+
+		&_main
+			display: flex 
+			justify-content: space-between
+			padding: 0 10px
+			a
+				color: #070716
+				font-size: 15px
+				font-weight: 300
+				text-transform: uppercase
+
+		&_sub
+			margin-top: 15px
+			display: flex 
+			justify-content: space-between
+			a
+				color: #999999
+				font-size: 11px
+				font-weight: 300
+				text-transform: uppercase
+
+		&_lang	
+			margin-top: 19px
+			color: $primary_color
+			font-size: 11px
+			font-weight: 400
+			text-transform: uppercase
+			text-align: center
+			cursor: pointer
+			&:hover
+				text-decoration: underline
+
+	&_stores
+		&_img
+			display: inline-block
+			width: 100%
+			margin-left: 10px
+
+		
+
+
+
+
+	
