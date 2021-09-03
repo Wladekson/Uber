@@ -26,7 +26,7 @@ nav
 	margin: 0
 	list-style-type: none
 
-	.menu_link
+	&_link
 		color: $white_color
 		font-size: 15px
 		font-weight: 300
@@ -36,7 +36,7 @@ nav
 	&:hover
 		text-decoration: underline
 
-	.menu_item
+	&_item
 		padding-right: 28px
 		border-right: 2px dotted #000
 
@@ -47,25 +47,25 @@ nav
 	height: 84px
 	background-color: rgba(0, 0, 0, 0.6)
 
-	.subheader_logo
+	&_logo
 		max-width: 100%
 		margin-top: 16px
 
-	.subheader_logotext
+	&_logotext
 		color: $white_color
 		font-size: 13px
 		font-weight: 400
 		opacity: .5
 		margin-top: 6px
 
-	.subheader_call
+	&_call
 		margin-top: 19px
 		color: $white_color
 		font-size: 12px
 		font-weight: 300
 		text-align: right
 
-	.subheader_phone
+	&_phone
 		display: block
 		margin-top: 8px
 		color: $white_color
@@ -97,7 +97,7 @@ nav
 	text-align: center
 	padding: 150px 0 135px 0
 
-	.promo_header
+	&_header
 		color: $white_color
 		font-size: 60px
 		font-weight: 700
@@ -106,7 +106,7 @@ nav
 		margin: 0
 		margin-top: 50px
 
-	.promo_subheader
+	&_subheader
 		color: $white_color
 		font-size: 36px
 		font-weight: 700
@@ -115,7 +115,7 @@ nav
 		margin: 0
 		margin-top: 22px
 
-	.promo_text
+	&_text
 		color: $white_color
 		font-size: 18px
 		font-weight: 400
@@ -123,7 +123,7 @@ nav
 		margin: 0
 		margin-top: 23px
 
-	.promo_btn
+	&_btn
 		margin-top: 102px
 		width: 259px
 		height: 63px
@@ -141,10 +141,6 @@ nav
 		&:active
 			transform: scale(1.0, 1.0)
 			background-image: linear-gradient(to top, $primary_color+#111111 0%, $primary_color+#424242+#111111 100%)
-
-
-
-			
 
 .label
 	width: 112px
@@ -178,46 +174,48 @@ nav
 .reasons
  	padding: 71px 0 65px 0
 
-.reasons .reasons_item
+	&_item
 	margin-top: 32px
 	display: flex
 	justify-content: flex-start
 	align-items: center
 
-	.reasons_ellipse
-		margin-right: 26px
-		width: 113px
-		height: 113px
-		border-radius: 100%
-		background-color: $primary_color
-		display: flex
-		justify-content: center
-		align-items: center
-		flex-shrink: 0
+		&_ellipse
+			margin-right: 26px
+			width: 113px
+			height: 113px
+			border-radius: 100%
+			background-color: $primary_color
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-shrink: 0
 
-	.reasons_descr
-		width: 346px
+		&_descr
+			width: 346px
 
-		.reasons_title
-			color: $primary_color
-			font-size: 17px
-			font-weight: 400
-			line-height: 21px
-			margin-bottom: 0
+			&_title
+				color: $primary_color
+				font-size: 17px
+				font-weight: 400
+				line-height: 21px
+				margin-bottom: 0
 
-		.reasons_text
-			color: $black_color
-			font-size: 15px
-			font-weight: 300
-			line-height: 21px
-			margin-bottom: 0
+			&_text
+				color: $black_color
+				font-size: 15px
+				font-weight: 300
+				line-height: 21px
+				margin-bottom: 0
 
 .mobile
 	min-height: 864px
 	padding: 48px 0 79px 0
 	background: url('../img/bg/grid_bg.png') center (center / cover) no-repeat
+
 	.row
 		margin-top: 32px
+		
 	&_item
 		width: 320px
 		height: 280px
